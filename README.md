@@ -17,5 +17,15 @@ An ASP.NET Core MVC application for managing meetings.
 📁 Path: `MeetingApp/`
 
 ---
+### 🔹 IdentityApp
+A user authentication and role-based authorization project built with ASP.NET Core Identity.
+
+**Features:**
+- User registration and login
+- Role management
+- Secure access control
+- EF Core with Identity integration
+
+📁 Path: `IdentityApp/`
 
 More projects will be added as I continue learning and practicing.
