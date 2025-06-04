@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Ana Sayfa";
+}
+
+<h2>Hoş geldiniz!</h2>
+<p>Sisteme giriş yaptınız.</p>
+
+@if (User.IsInRole("Admin"))
+{
+    <a asp-controller="Yonetici" asp-action="Index" class="btn btn-warning">
+        👥 Kullanıcıları Yönet
+    </a>
+}
+@if (User.IsInRole("Admin"))
+{
+    <a asp-controller="Roles" asp-action="Index" class="btn btn-outline-dark">Rolleri Yönet</a>
+}
+
+
+<!-- Alt satıra düzgün çıkış butonu -->
+<div class="mt-4">
+    <a asp-controller="Hesap" asp-action="Cikis" class="btn btn-outline-danger">
+        🔒 Çıkış Yap
+    </a>
+</div>

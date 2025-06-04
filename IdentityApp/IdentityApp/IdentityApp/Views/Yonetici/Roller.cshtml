@@ -1,0 +1,22 @@
+﻿@model List<IdentityApp.ViewModels.RolAtaViewModel>
+@{
+    ViewData["Title"] = "Rol Atama";
+}
+
+<h2>@ViewBag.KullaniciAd - Rol Atama</h2>
+
+<form asp-action="Roller" method="post">
+    <input type="hidden" name="id" value="@ViewBag.KullaniciId" />
+    <ul class="list-group">
+        @for (int i = 0; i < Model.Count; i++)
+        {
+            <li class="list-group-item">
+                <input type="checkbox" name="[@i].SeciliMi" value="true" @(Model[i].SeciliMi ? "checked" : "") />
+                <input type="hidden" name="[@i].RolAdi" value="@Model[i].RolAdi" />
+                @Model[i].RolAdi
+            </li>
+        }
+    </ul>
+    <br />
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+</form>

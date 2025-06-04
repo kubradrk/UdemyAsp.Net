@@ -1,0 +1,31 @@
+﻿@model List<IdentityApp.Models.Rol>
+
+@{
+    ViewData["Title"] = "Roller";
+}
+
+<h2>Mevcut Roller</h2>
+
+<a asp-action="Create" class="btn btn-success mb-3">+ Yeni Rol Oluştur</a>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Rol Adı</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int i = 1;
+        }
+        @foreach (var rol in Model)
+        {
+            <tr>
+                <td>@i</td>
+                <td>@rol.Name</td>
+            </tr>
+            i++;
+        }
+    </tbody>
+</table>

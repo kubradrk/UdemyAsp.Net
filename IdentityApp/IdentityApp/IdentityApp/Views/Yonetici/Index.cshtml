@@ -1,0 +1,48 @@
+﻿@model List<IdentityApp.ViewModels.KullaniciListeViewModel>
+
+<h2>Kullanıcı Listesi (Admin)</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Ad Soyad</th>
+            <th>E-posta</th>
+            <th>Kullanıcı Adı</th>
+            <th>Roller</th>
+            <th>İşlemler</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int sayac = 1;
+        }
+        @foreach (var kullanici in Model)
+        {
+            <tr>
+                <td>@sayac</td>
+                <td>@kullanici.AdSoyad</td>
+                <td>@kullanici.Email</td>
+                <td>@kullanici.UserName</td>
+                <td>
+                    @foreach (var rol in kullanici.Roller)
+                    {
+                        <span class="badge bg-secondary">@rol</span>
+                    }
+                </td>
+                <td>
+                    <a asp-controller="Yonetici" asp-action="Roller" asp-route-id="@kullanici.Id" class="btn btn-sm btn-warning">Rol Ata</a>
+
+                    <form asp-controller="Yonetici" asp-action="Sil" asp-route-id="@kullanici.Id" method="post" class="d-inline">
+                        <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Silmek istediğine emin misin?')">Sil</button>
+                    </form>
+                    <a asp-controller="Yonetici" asp-action="Edit" asp-route-id="@kullanici.Id" class="btn btn-sm btn-info">
+                        Düzenle
+                    </a>
+
+                </td>
+            </tr>
+            sayac++;
+        }
+    </tbody>
+</table>

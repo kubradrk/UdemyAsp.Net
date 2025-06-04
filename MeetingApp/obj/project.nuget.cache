@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1Zz8B2Ooxcw=",
+  "dgSpecHash": "jfzCGjUw0Zs=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Durak\\Desktop\\StajProjelerSon\\MeetingApp\\MeetingApp\\MeetingApp.csproj",
+  "projectFilePath": "C:\\Users\\Durak\\Desktop\\UdemyProjeler\\MeetingApp\\MeetingApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Durak\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.20\\microsoft.windowsdesktop.app.ref.7.0.20.nupkg.sha512",
     "C:\\Users\\Durak\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.20\\microsoft.netcore.app.ref.7.0.20.nupkg.sha512",

@@ -1,0 +1,27 @@
+﻿@model IdentityApp.ViewModels.SifreYenileViewModel
+
+@{
+    ViewData["Title"] = "Şifre Yenileme";
+}
+
+<h2>Şifre Yenile</h2>
+
+<form asp-action="SifreYenile" method="post">
+    <input type="hidden" asp-for="Email" />
+    <input type="hidden" asp-for="Token" />
+
+    <div class="form-group">
+        <label>Yeni Şifre</label>
+        <input asp-for="Sifre" class="form-control" type="password" required />
+        <span asp-validation-for="Sifre" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label>Yeni Şifre Tekrar</label>
+        <input asp-for="SifreTekrar" class="form-control" type="password" required />
+        <span asp-validation-for="SifreTekrar" class="text-danger"></span>
+    </div>
+
+    <br />
+    <button type="submit" class="btn btn-success">Şifreyi Yenile</button>
+</form>

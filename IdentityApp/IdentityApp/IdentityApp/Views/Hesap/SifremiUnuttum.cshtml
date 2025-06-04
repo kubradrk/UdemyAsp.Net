@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Şifremi Unuttum";
+}
+
+<h2>Şifremi Unuttum</h2>
+
+<form asp-action="SifremiUnuttum" method="post">
+    <div class="form-group">
+        <label for="email">E-Posta Adresiniz</label>
+        <input type="email" class="form-control" id="email" name="email" required />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Yenileme Bağlantısı Gönder</button>
+</form>
+
+@if (ViewBag.Mesaj != null)
+{
+    <div class="alert alert-success mt-3">@ViewBag.Mesaj</div>
+}

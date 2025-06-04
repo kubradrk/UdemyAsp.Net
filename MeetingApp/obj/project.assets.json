@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Durak\\Desktop\\StajProjelerSon\\MeetingApp\\MeetingApp\\MeetingApp.csproj",
+      "projectUniqueName": "C:\\Users\\Durak\\Desktop\\UdemyProjeler\\MeetingApp\\MeetingApp.csproj",
       "projectName": "MeetingApp",
-      "projectPath": "C:\\Users\\Durak\\Desktop\\StajProjelerSon\\MeetingApp\\MeetingApp\\MeetingApp.csproj",
+      "projectPath": "C:\\Users\\Durak\\Desktop\\UdemyProjeler\\MeetingApp\\MeetingApp.csproj",
       "packagesPath": "C:\\Users\\Durak\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Durak\\Desktop\\StajProjelerSon\\MeetingApp\\MeetingApp\\obj\\",
+      "outputPath": "C:\\Users\\Durak\\Desktop\\UdemyProjeler\\MeetingApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Durak\\AppData\\Roaming\\NuGet\\NuGet.Config",
