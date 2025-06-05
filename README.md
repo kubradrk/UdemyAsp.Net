@@ -28,4 +28,22 @@ A user authentication and role-based authorization project built with ASP.NET Co
 
 📁 Path: `IdentityApp/`
 
+---
+### 🔹 FormsApp
+A basic ASP.NET Core MVC application created to practice form handling, model binding, and validation using tag helpers and Razor Pages.
+
+Features:
+-GET and POST form handling
+-Form validation with data annotations
+-Use of tag helpers
+-Bootstrap-based form layout
+
+📁 Path: FormsApp/
+
+
+-----------------------------------------------------------------------------------
+📝 Note
+All projects in this repository were built as part of a Udemy course and are intended for practice and learning purposes during my ASP.NET Core MVC learning process.
+
+
 More projects will be added as I continue learning and practicing.
