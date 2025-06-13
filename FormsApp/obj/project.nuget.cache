@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yeE6smyDdbU=",
+  "dgSpecHash": "ZYoGBhIbcjA=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Durak\\Desktop\\Projeler Tanıtım\\FormsApp\\FormsApp\\FormsApp.csproj",
+  "projectFilePath": "C:\\Users\\Durak\\Desktop\\UdemyProjeler\\FormsApp\\FormsApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Durak\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.20\\microsoft.windowsdesktop.app.ref.7.0.20.nupkg.sha512",
     "C:\\Users\\Durak\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.20\\microsoft.netcore.app.ref.7.0.20.nupkg.sha512",

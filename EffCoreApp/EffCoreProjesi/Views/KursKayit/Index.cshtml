@@ -1,0 +1,25 @@
+﻿@model IEnumerable<EffCoreProjesi.Models.KursKayit>
+@{
+    ViewData["Title"] = "Kayıtlı Kurslar";
+}
+
+<h2 style="text-align:center; margin-bottom: 30px;">Kurs Kayıtları</h2>
+
+<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+    @foreach (var kayit in Model)
+    {
+        <div style="border: 1px solid #ddd; border-radius: 8px; padding: 16px; width: 280px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+            <h4>@($"{kayit.Ogrenci?.OgrenciAd} {kayit.Ogrenci?.OgrenciSoyad}")</h4>
+            <p><strong>Kurs:</strong> @kayit.Kurs</p>
+            <p><strong>Kayıt Tarihi:</strong> @kayit.KayitTarihi.ToShortDateString()</p>
+            <div style="margin-top: 10px;">
+                <a href="/KursKayit/Edit/@kayit.KayitId" style="margin-right:10px; text-decoration:none;">✏️ Düzenle</a>
+                <a href="/KursKayit/Delete/@kayit.KayitId" style="text-decoration:none; color:red;">🗑️ Sil</a>
+            </div>
+        </div>
+    }
+</div>
+
+<div style="text-align:center; margin-top: 30px;">
+    <a href="/KursKayit/Create" style="text-decoration: none; font-weight: bold;">➕ Yeni Kayıt Ekle</a>
+</div>

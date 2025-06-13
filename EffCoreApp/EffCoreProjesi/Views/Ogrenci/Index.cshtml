@@ -1,0 +1,53 @@
+﻿<!-- Views/Ogrenci/Index.cshtml -->
+@model List<EffCoreProjesi.Models.Ogrenci>
+
+<style>
+    .ogrenci-kart {
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 16px;
+        margin-bottom: 20px;
+        background-color: #f9f9f9;
+        box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+        transition: transform 0.2s ease;
+    }
+    .ogrenci-kart:hover {
+        transform: scale(1.01);
+        background-color: #eef7ff;
+    }
+    .ogrenci-kart h5 {
+        margin: 0 0 10px 0;
+        color: #0056b3;
+    }
+    .ogrenci-kart p {
+        margin: 4px 0;
+        font-size: 14px;
+    }
+    .ogrenci-kart .butonlar a {
+        margin-right: 10px;
+        text-decoration: none;
+        color: #0066cc;
+    }
+    .ogrenci-kart .butonlar a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<h2>Öğrenci Listesi</h2>
+<a href="/Ogrenci/Create">+ Yeni Öğrenci</a>
+
+<div>
+    @foreach (var item in Model)
+    {
+        <div class="ogrenci-kart">
+            <h5>@item.AdSoyad</h5>
+            <p><strong>E-posta:</strong> @item.Eposta</p>
+            <p><strong>Telefon:</strong> @item.Telefon</p>
+            <p><strong>Kayıt Tarihi:</strong> @item.KayitTarihi.ToShortDateString()</p>
+            <div class="butonlar">
+                <a href="/Ogrenci/Edit/@item.OgrenciId">Düzenle</a>
+                <a href="/Ogrenci/Delete/@item.OgrenciId">Sil</a>
+            </div>
+        </div>
+    }
+</div>

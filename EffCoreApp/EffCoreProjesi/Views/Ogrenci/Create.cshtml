@@ -1,0 +1,28 @@
+﻿
+@model EffCoreProjesi.Models.Ogrenci
+
+<h2>Yeni Öğrenci Ekle</h2>
+
+<form method="post">
+    <p>
+        <label>Ad:</label><br />
+        <input type="text" name="OgrenciAd" value="@Model?.OgrenciAd" />
+    </p>
+    <p>
+        <label>Soyad:</label><br />
+        <input type="text" name="OgrenciSoyad" value="@Model?.OgrenciSoyad" />
+    </p>
+    <p>
+        <label>E-posta:</label><br />
+        <input type="email" name="Eposta" value="@Model?.Eposta" />
+    </p>
+    <p>
+        <label>Telefon:</label><br />
+        <input type="text" name="Telefon" value="@Model?.Telefon" />
+    </p>
+    <p>
+        <button type="submit">Kaydet</button>
+        <a href="/Ogrenci">İptal</a>
+    </p>
+</form>
+

@@ -1,0 +1,29 @@
+﻿
+@model EffCoreProjesi.Models.Ogrenci
+
+<h2>Öğrenci Düzenle</h2>
+
+<form method="post">
+    <input type="hidden" name="OgrenciId" value="@Model.OgrenciId" />
+    <p>
+        <label>Ad:</label><br />
+        <input type="text" name="OgrenciAd" value="@Model.OgrenciAd" />
+    </p>
+    <p>
+        <label>Soyad:</label><br />
+        <input type="text" name="OgrenciSoyad" value="@Model.OgrenciSoyad" />
+    </p>
+    <p>
+        <label>E-posta:</label><br />
+        <input type="email" name="Eposta" value="@Model.Eposta" />
+    </p>
+    <p>
+        <label>Telefon:</label><br />
+        <input type="text" name="Telefon" value="@Model.Telefon" />
+    </p>
+    <p>
+        <button type="submit">Güncelle</button>
+        <a href="/Ogrenci">İptal</a>
+    </p>
+</form>
+

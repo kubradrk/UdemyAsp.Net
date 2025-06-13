@@ -1,0 +1,17 @@
+﻿@model EffCoreProjesi.Models.Ogretmen
+
+@{
+    ViewData["Title"] = "Öğretmen Sil";
+}
+
+<h2>Öğretmen Sil</h2>
+
+<div style="max-width: 600px; margin: auto; padding: 20px; border: 1px solid #f00; border-radius: 10px; background-color: #ffe6e6;">
+    <p><strong>@Model.Ad @Model.Soyad</strong> adlı öğretmeni silmek istediğinize emin misiniz?</p>
+
+    <form asp-action="DeleteConfirmed" method="post">
+        <input type="hidden" asp-for="OgretmenId" />
+        <button type="submit" class="btn btn-danger">Evet, Sil</button>
+        <a asp-action="Index" class="btn btn-secondary" style="margin-left: 10px;">Vazgeç</a>
+    </form>
+</div>

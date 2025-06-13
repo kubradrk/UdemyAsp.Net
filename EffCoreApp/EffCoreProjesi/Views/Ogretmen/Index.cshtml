@@ -1,0 +1,28 @@
+﻿@model IEnumerable<EffCoreProjesi.Models.Ogretmen>
+
+@{
+    ViewData["Title"] = "Öğretmen Listesi";
+}
+
+<h2 style="text-align:center; margin-bottom: 30px;">Öğretmenler</h2>
+
+<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+    @foreach (var ogretmen in Model)
+    {
+        <div style="border: 1px solid #ddd; border-radius: 8px; padding: 16px; width: 280px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+            <h4>@ogretmen.Ad @ogretmen.Soyad</h4>
+            <p><strong>E-posta:</strong> @ogretmen.Eposta</p>
+            <p><strong>Telefon:</strong> @ogretmen.Telefon</p>
+            <p><strong>Başlama Tarihi:</strong> @ogretmen.BaslamaTarihi.ToShortDateString()</p>
+
+            <div style="margin-top: 10px;">
+                <a href="/Ogretmen/Edit/@ogretmen.OgretmenId" style="margin-right:10px; text-decoration:none;">✏️ Düzenle</a>
+                <a href="/Ogretmen/Delete/@ogretmen.OgretmenId" style="text-decoration:none; color:red;">🗑️ Sil</a>
+            </div>
+        </div>
+    }
+</div>
+
+<div style="text-align:center; margin-top: 30px;">
+    <a href="/Ogretmen/Create" style="text-decoration: none; font-weight: bold;">➕ Yeni Öğretmen Ekle</a>
+</div>

@@ -1,0 +1,19 @@
+﻿@model EffCoreProjesi.Models.KursKayit
+@{
+    ViewData["Title"] = "Kayıt Sil";
+}
+
+<h2>Kayıt Sil</h2>
+
+<div style="max-width:400px; margin:auto;">
+    <p>
+        <strong>@Model.Ogrenci?.OgrenciAd @Model.Ogrenci?.OgrenciSoyad</strong> adlı öğrencinin
+        <strong>@Model.Kurs</strong> kurs kaydı silinsin mi?
+    </p>
+
+    <form asp-action="DeleteConfirmed" method="post">
+        <input type="hidden" asp-for="KayitId" />
+        <button type="submit" class="btn btn-danger">Sil</button>
+        <a href="/KursKayit/Index" class="btn btn-secondary">İptal</a>
+    </form>
+</div>

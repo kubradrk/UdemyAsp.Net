@@ -1,0 +1,33 @@
+﻿@model EffCoreProjesi.Models.KursKayit
+@{
+    ViewData["Title"] = "Yeni Kayıt";
+}
+
+<h2>Yeni Kurs Kaydı</h2>
+
+<form asp-action="Create" method="post" style="max-width:400px; margin:auto;">
+
+    <div>
+        <label>Öğrenci Adı</label>
+        <select asp-for="OgrenciId" asp-items="ViewBag.OgrenciAdListesi" class="form-control"></select>
+    </div>
+
+    <div>
+        <label>Öğrenci Soyadı</label>
+        <select asp-for="OgrenciId" asp-items="ViewBag.OgrenciSoyadListesi" class="form-control"></select>
+        <!-- Aynı OgrenciId'yi tutacak. Ama görsel olarak iki ayrı alan gibi gözükecek. -->
+    </div>
+
+    <div>
+        <label>Kurs Başlığı</label>
+        <select asp-for="KursId" asp-items="ViewBag.KursListesi" class="form-control"></select>
+    </div>
+
+    <div>
+        <label>Kayıt Tarihi</label>
+        <input asp-for="KayitTarihi" type="date" class="form-control" />
+    </div>
+
+    <br />
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+</form>

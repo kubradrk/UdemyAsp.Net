@@ -1,0 +1,12 @@
+﻿
+@model EffCoreProjesi.Models.Ogrenci
+
+<h2>Silme Onayı</h2>
+
+<p><strong>@Model.AdSoyad</strong> adlı öğrenciyi silmek istediğinize emin misiniz?</p>
+
+<form method="post">
+    <input type="hidden" name="id" value="@Model.OgrenciId" />
+    <button type="submit">Evet, Sil</button>
+    <a href="/Ogrenci">Vazgeç</a>
+</form>

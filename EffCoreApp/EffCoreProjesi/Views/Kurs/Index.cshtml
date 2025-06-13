@@ -1,0 +1,29 @@
+﻿@model IEnumerable<EffCoreProjesi.Models.Kurs>
+
+@{
+    ViewData["Title"] = "Kurs Listesi";
+}
+
+<h2 style="text-align:center; margin-bottom: 30px;">Kurslar</h2>
+
+<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+    @foreach (var kurs in Model)
+    {
+        <div style="border: 1px solid #ddd; border-radius: 8px; padding: 16px; width: 280px; box-shadow: 2px 2px 8px rgba(0,0,0,0.1);">
+            <h4>@kurs.Baslik</h4>
+            <p><strong>Öğretmen ID:</strong> @kurs.OgretmenId</p>
+            <p><strong>Öğretmen Adı:</strong> @kurs.Ogretmen?.Ad</p>
+            <p><strong>Öğretmen Soyadı:</strong> @kurs.Ogretmen?.Soyad</p>
+
+
+            <div style="margin-top: 10px;">
+                <a href="/Kurs/Edit/@kurs.KursId" style="margin-right:10px; text-decoration:none;">✏️ Düzenle</a>
+                <a href="/Kurs/Delete/@kurs.KursId" style="text-decoration:none; color:red;">🗑️ Sil</a>
+            </div>
+        </div>
+    }
+</div>
+
+<div style="text-align:center; margin-top: 30px;">
+    <a href="/Kurs/Create" style="text-decoration: none; font-weight: bold;">➕ Yeni Kurs Ekle</a>
+</div>

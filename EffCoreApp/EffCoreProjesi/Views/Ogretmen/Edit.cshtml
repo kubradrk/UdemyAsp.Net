@@ -1,0 +1,37 @@
+﻿@model EffCoreProjesi.Models.Ogretmen
+
+@{
+    ViewData["Title"] = "Öğretmen Güncelle";
+}
+
+<h2>Öğretmen Güncelle</h2>
+
+<div style="max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+    <form asp-action="Edit" method="post">
+        <input type="hidden" asp-for="OgretmenId" />
+
+        <div>
+            <label>Ad</label>
+            <input asp-for="Ad" class="form-control" />
+        </div>
+        <div>
+            <label>Soyad</label>
+            <input asp-for="Soyad" class="form-control" />
+        </div>
+        <div>
+            <label>Eposta</label>
+            <input asp-for="Eposta" class="form-control" />
+        </div>
+        <div>
+            <label>Telefon</label>
+            <input asp-for="Telefon" class="form-control" />
+        </div>
+        <div>
+            <label>Başlama Tarihi</label>
+            <input asp-for="BaslamaTarihi" type="date" class="form-control" />
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary">Güncelle</button>
+        <a asp-action="Index" class="btn btn-secondary" style="margin-left: 10px;">İptal</a>
+    </form>
+</div>

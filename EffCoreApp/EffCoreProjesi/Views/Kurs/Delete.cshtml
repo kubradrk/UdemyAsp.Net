@@ -1,0 +1,15 @@
+﻿@model EffCoreProjesi.Models.Kurs
+
+@{
+    ViewData["Title"] = "Kurs Sil";
+}
+
+<h2>Kurs Sil</h2>
+
+<h4>@Model.Baslik</h4>
+<p>Bu kursu silmek istediğinize emin misiniz?</p>
+
+<form asp-action="DeleteConfirmed">
+    <input type="hidden" asp-for="KursId" />
+    <button type="submit">Sil</button>
+</form>

@@ -1,0 +1,48 @@
+﻿<!-- Views/Home/Index.cshtml -->
+@{
+    ViewData["Title"] = "Ana Sayfa";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Eğitim Takip Sistemine Hoş Geldiniz</h1>
+    <p class="lead mt-3">Öğrenci, öğretmen ve kurs bilgilerini kolayca yönetin.</p>
+
+    <div class="row mt-5">
+        <div class="col-md-3">
+            <div class="card border-primary text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Öğrenciler</h5>
+                    <p class="card-text">Tüm öğrencileri görüntüleyin ve yönetin.</p>
+                    <a href="/Ogrenci" class="btn btn-primary">Git</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card border-success text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Öğretmenler</h5>
+                    <p class="card-text">Öğretmen listesini düzenleyin.</p>
+                    <a href="/Ogretmen" class="btn btn-success">Git</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card border-warning text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Kurslar</h5>
+                    <p class="card-text">Yeni kurslar oluşturun ve yönetin.</p>
+                    <a href="/Kurs" class="btn btn-warning">Git</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card border-info text-center">
+                <div class="card-body">
+                    <h5 class="card-title">Kayıtlar</h5>
+                    <p class="card-text">Kurs kayıtlarını yönetin.</p>
+                    <a href="/KursKayit" class="btn btn-info">Git</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

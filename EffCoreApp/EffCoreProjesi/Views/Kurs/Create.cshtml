@@ -1,0 +1,19 @@
+﻿@model EffCoreProjesi.Models.Kurs
+
+@{
+    ViewData["Title"] = "Yeni Kurs Ekle";
+}
+
+<h2>Yeni Kurs</h2>
+
+<form asp-action="Create">
+    <div>
+        <label>Kurs Başlığı</label>
+        <input asp-for="Baslik" />
+    </div>
+    <div>
+        <label>Öğretmen ID</label>
+        <input asp-for="OgretmenId" />
+    </div>
+    <button type="submit">Kaydet</button>
+</form>
