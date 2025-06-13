@@ -40,6 +40,18 @@ A basic ASP.NET Core MVC application created to practice form handling, model bi
 
 📁 Path: FormsApp/
 
+---
+### 🔹 EffCoreApp  
+A more advanced ASP.NET Core MVC application built with Entity Framework Core, designed to manage courses, students, and instructors.
+
+**Features:**
+- Course, student, and teacher management
+- Code-first EF Core database
+- CRUD operations with clean MVC architecture
+- Validation and model binding
+
+📁 Path: `EffCoreApp/`
+
 
 -----------------------------------------------------------------------------------
 📝 Note
